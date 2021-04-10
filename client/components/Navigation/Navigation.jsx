@@ -1,5 +1,7 @@
-import Link from 'next/link';
 import { useState } from 'react';
+import Link from 'next/link';
+// import { Transition } from '@headlessui/react';
+import MobileDropdown from './MobileDropdown';
 
 const menuIcon = (
     <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 " fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -19,52 +21,51 @@ const xIcon = (
 
 const navItems = [
     {
-        text: 'LinkedIn',
-        href: '#',
+        text: 'Portfolio',
+        href: '/portfolio',
     },
     {
-        text: 'Portfolio',
-        href: '#',
+        text: 'Contact',
+        href: '/contact',
     },
 ];
 
 const NavigationItems = (
-    <ul className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+    <div className="flex flex-col px-2 space-y-1 md:space-y-0 md:space-x-2 md:flex-row">
         {navItems.map((item) => (
-            <li
-                key="item"
-                className="px-3 py-2 text-sm duration-300 ease-in-out bg-gray-900 rounded-md text-gray-50 hover:text-fuchsia-500"
-            >
-                <Link href={item.href}>{item.text}</Link>
-            </li>
+            <Link href={item.href} key={item.text}>
+                <a className="px-3 py-2 text-sm duration-300 ease-in-out bg-gray-900 rounded-md text-gray-50 md:hover:text-primary-500 md:bg-transparent hover:bg-gray-800">
+                    {item.text}
+                </a>
+            </Link>
         ))}
-    </ul>
+    </div>
 );
 
 const Navigation = () => {
-    const [isOpen, setIsOpen] = useState(true);
+    const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <nav className={`w-full h-auto ${isOpen ? 'bg-gray-800' : 'bg-transparent'}`}>
-            <div className="flex flex-row items-center content-center justify-between w-full h-auto px-4 py-2 text-sm md:p-6 text-gray-50 font-poppins">
-                <h1 className="font-semibold tracking-widest uppercase duration-300 ease-in-out hover:text-fuchsia-500">
+        <nav className="w-full h-auto">
+            <div className="flex flex-row items-center justify-between w-full h-16 px-4 py-2 text-sm md:p-6 text-gray-50 font-poppins">
+                <h1 className="font-semibold tracking-widest uppercase duration-300 ease-in-out hover:text-primary-500">
                     <Link href="/">THOMAS GORMLEY</Link>
                 </h1>
+
                 <button
                     type="button"
                     onClick={() => setIsOpen(!isOpen)}
-                    className="p-2 duration-150 ease-in rounded-md hover:bg-gray-700 text-gray-50 focus:outline-none focus:ring-2 focus:ring-gray-50 focus:ring-offset-2 focus:ring-offset-gray-800"
+                    className="inline-flex items-center justify-center w-10 h-10 p-2 duration-150 ease-in rounded-md md:hidden hover:bg-gray-700 text-gray-50 focus:outline-none focus:ring-2 focus:ring-gray-50 focus:ring-offset-2 focus:ring-offset-gray-800"
                 >
                     <span className="sr-only">Open navigation</span>
                     {isOpen ? xIcon : menuIcon}
                 </button>
+
+                {/* Nav Items for larger screens shown on header line */}
+                <div className="hidden px-2 pt-2 pb-3 space-y-1 md:block">{NavigationItems}</div>
             </div>
 
-            {isOpen && (
-                <div className="block bg-gray-800 md:hidden">
-                    <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">{NavigationItems}</div>
-                </div>
-            )}
+            <MobileDropdown isOpen={isOpen} setIsOpen={setIsOpen} NavigationItems={NavigationItems} />
         </nav>
     );
 };

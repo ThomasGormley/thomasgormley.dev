@@ -1,9 +1,10 @@
 import 'tailwindcss/tailwind.css';
 import Head from 'next/head';
-
+import { QueryClientProvider, QueryClient } from 'react-query';
+const queryClient = new QueryClient();
 function MyApp({ Component, pageProps }) {
     return (
-        <>
+        <QueryClientProvider client={queryClient}>
             <Head>
                 <link rel="preconnect" href="https://fonts.gstatic.com" />
                 <link
@@ -12,7 +13,7 @@ function MyApp({ Component, pageProps }) {
                 />
             </Head>
             <Component {...pageProps} />
-        </>
+        </QueryClientProvider>
     );
 }
 
