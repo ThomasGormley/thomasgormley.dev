@@ -12,17 +12,26 @@ export default async (_, res) => {
     const title = song.item.name;
     const artist = song.item.artists.map((_artist) => _artist.name).join(', ');
     const album = song.item.album.name;
-    const albumImageUrl = song.item.album.images[0].url;
+    const albumImage640 = song.item.album.images[0].url;
+    const albumImage300 = song.item.album.images[1].url;
     const songUrl = song.item.external_urls.spotify;
+    const progress = song.progress_ms;
+    const duration = song.item.duration_ms;
 
     res.setHeader('Cache-Control', 'public, s-maxage=60, stale-while-revalidate=30');
 
     return res.status(200).json({
-        album,
-        albumImageUrl,
-        artist,
         isPlaying,
-        songUrl,
         title,
+        artist,
+        album,
+        albumImage640,
+        albumImage300,
+        songUrl,
+        progress,
+        duration,
     });
+    // return res.status(200).json({
+    //     song,
+    // });
 };

@@ -2,6 +2,7 @@ import Link from 'next/link';
 
 const SocialIcon = ({ title, href, icon, size, colour, hoverColour }) => (
     <span className={`w-${size} h-${size} text-${colour}-100 duration-150 cursor-pointer hover:text-[${hoverColour}]`}>
+        {hoverColour}
         <Link href={href}>
             <a title={title}>{icon.svg}</a>
         </Link>
