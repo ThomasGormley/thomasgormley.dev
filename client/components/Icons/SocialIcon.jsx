@@ -1,14 +1,18 @@
 import Link from 'next/link';
 
 const SocialIcon = ({ title, href, icon, size, colour, hoverColour }) => (
-    <span className={`w-${size} h-${size} text-${colour}-100 duration-150 cursor-pointer hover:text-[${hoverColour}]`}>
-        {hoverColour}
+    <span className={`w-${size} h-${size} ${colour} ${hoverColour} duration-150 cursor-pointer`}>
         <Link href={href}>
-            <a title={title}>{icon.svg}</a>
+            <a title={title} href={href}>
+                {icon}
+            </a>
         </Link>
     </span>
 );
 
+SocialIcon.defaultProps = {
+    colour: 'text-gray-50',
+};
 export default SocialIcon;
 
 /* <svg role="img" viewBox="0 0 24 24" className="w-7 h-7" fill="currentColor" xmlns="http://www.w3.org/2000/svg">

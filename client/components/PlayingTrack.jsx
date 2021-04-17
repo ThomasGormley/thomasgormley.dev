@@ -1,3 +1,5 @@
+import NotPlaying from './NotPlaying';
+
 function millisToMinutesAndSeconds(millis) {
     var minutes = Math.floor(millis / 60000);
     var seconds = ((millis % 60000) / 1000).toFixed(0);
@@ -8,11 +10,13 @@ const PlayingTrack = ({ track }) => {
     const percent = (track.progress / track.duration) * 100;
     const elapsed = millisToMinutesAndSeconds(track.progress);
     const total = millisToMinutesAndSeconds(track.duration);
+
     if (!track.isPlaying) {
-        return <p>Not playing</p>;
+        return <NotPlaying />;
     }
+
     return (
-        <div className="h-auto mb-20 text-white cursor-pointer rounded-2xl">
+        <div className="h-auto text-white cursor-pointer rounded-2xl">
             <div className="flex flex-row ">
                 <img
                     src={track.albumImage300}

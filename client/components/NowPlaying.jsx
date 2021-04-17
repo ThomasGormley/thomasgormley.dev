@@ -1,4 +1,5 @@
 import { useQuery } from 'react-query';
+import NotPlaying from './NotPlaying';
 import PlayingTrack from './PlayingTrack';
 
 const fetchNowPlaying = async () => {
@@ -18,11 +19,13 @@ const NowPlaying = () => {
     return (
         <>
             <section className="max-w-3xl mx-auto">
-                <h1 className="text-3xl font-semibold text-gray-50">Now Playing</h1>
-                <p className="py-2 text-xs font-normal text-gray-500">
-                    What I&apos;m currently listening to on Spotify
-                </p>
-                <div className="mt-5 ">{isLoading ? <p>Loading</p> : <PlayingTrack track={track} />}</div>
+                <h1 className="text-xl font-semibold text-gray-50">Now Playing</h1>
+                {track?.isPlaying && (
+                    <p className="mb-4 text-xs font-normal text-gray-500 ">
+                        What I&apos;m currently listening to on Spotify
+                    </p>
+                )}
+                <div className="">{isLoading ? <NotPlaying /> : <PlayingTrack track={track} />}</div>
             </section>
         </>
     );

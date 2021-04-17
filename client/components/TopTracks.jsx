@@ -18,9 +18,9 @@ const TopTracks = () => {
     });
     return (
         <>
-            <section className="max-w-3xl mx-auto">
-                <h1 className="text-3xl font-semibold text-gray-50">Top Tracks</h1>
-                <p className="py-2 text-xs font-normal text-gray-500">
+            <section className="max-w-3xl py-4 mx-auto">
+                <h1 className="text-xl font-semibold text-gray-50">Top Tracks</h1>
+                <p className="mb-4 text-xs font-normal text-gray-500">
                     The tracks I&apos;ve been listening to recently on Spotify
                 </p>
                 <div className="grid grid-cols-2 mt-5">

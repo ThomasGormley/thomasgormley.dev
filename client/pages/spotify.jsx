@@ -1,5 +1,6 @@
 import Head from 'next/head';
-import { Navigation } from '../components/Navigation';
+import Container from '../components/Container';
+import Header from '../components/Header';
 import NowPlaying from '../components/NowPlaying';
 import TopTracks from '../components/TopTracks';
 
@@ -9,13 +10,13 @@ const Spotify = () => (
             <title>Thomas Gormley</title>
             <link rel="icon" href="/favicon.ico" />
         </Head>
-        <div className="max-w-4xl mx-auto">
-            <header className=" md:py-4">
-                <Navigation />
-            </header>
-            <NowPlaying />
-            <TopTracks />
-        </div>
+        <Container>
+            <Header />
+            <div className="px-6 space-y-8">
+                <NowPlaying />
+                <TopTracks />
+            </div>
+        </Container>
     </div>
 );
 
