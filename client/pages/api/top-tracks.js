@@ -1,5 +1,5 @@
 import { getTopTracks } from '../../lib/spotify';
-import config from '../../lib/';
+import config from '../../lib/config';
 
 const { client_id } = config.spotify;
 
