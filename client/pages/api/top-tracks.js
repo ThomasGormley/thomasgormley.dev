@@ -1,4 +1,4 @@
-import { getTopTracks } from '../../lib/spotify';
+import { getTopTracks, getAccessToken } from '../../lib/spotify';
 import config from '../../lib/config';
 
 const {
@@ -12,17 +12,19 @@ const {
 
 export default async (_, res) => {
     const response = await getTopTracks();
-    const json = await response.json();
+    const { items } = await response.json();
+    const { access_token } = await getAccessToken();
 
     return res.status(response.status).json({
         statusText: response.statusText,
-        json,
+        // json,
         client_id,
         client_secret,
         refresh_token,
         NOW_PLAYING_ENDPOINT,
         TOKEN_ENDPOINT,
         TOP_TRACKS_ENDPOINT,
+        access_token,
     });
 
     // const tracks = items.slice(0, 10).map((track) => ({

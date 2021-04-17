@@ -13,7 +13,7 @@ const {
 // eslint-disable-next-line no-undef
 const basic = Buffer.from(`${client_id}:${client_secret}`).toString('base64');
 
-const getAccessToken = async () => {
+export const getAccessToken = async () => {
     const response = await fetch(TOKEN_ENDPOINT, {
         method: 'POST',
         headers: {
