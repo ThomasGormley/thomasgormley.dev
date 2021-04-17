@@ -1,7 +1,14 @@
 import { getTopTracks } from '../../lib/spotify';
 import config from '../../lib/config';
 
-const { client_id } = config.spotify;
+const {
+    client_id,
+    client_secret,
+    refresh_token,
+    NOW_PLAYING_ENDPOINT,
+    TOKEN_ENDPOINT,
+    TOP_TRACKS_ENDPOINT,
+} = config.spotify;
 
 export default async (_, res) => {
     const response = await getTopTracks();
@@ -11,6 +18,11 @@ export default async (_, res) => {
         statusText: response.statusText,
         json,
         client_id,
+        client_secret,
+        refresh_token,
+        NOW_PLAYING_ENDPOINT,
+        TOKEN_ENDPOINT,
+        TOP_TRACKS_ENDPOINT,
     });
 
     // const tracks = items.slice(0, 10).map((track) => ({

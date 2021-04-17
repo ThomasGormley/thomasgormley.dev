@@ -30,6 +30,7 @@ const getAccessToken = async () => {
 
 export const getTopTracks = async () => {
     const { access_token } = await getAccessToken();
+    console.log(access_token);
     return fetch(TOP_TRACKS_ENDPOINT, {
         headers: {
             Authorization: `Bearer ${access_token}`,
