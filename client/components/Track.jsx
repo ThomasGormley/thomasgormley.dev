@@ -1,5 +1,5 @@
 const Track = ({ track }) => (
-    <div className="relative h-20 mb-5 text-white cursor-pointer rounded-2xl">
+    <div className="relative h-20 mb-5 text-white rounded-2xl">
         <div className="h-auto">
             <img
                 src={track.images[0].url}
@@ -14,9 +14,13 @@ const Track = ({ track }) => (
                 alt={track.title}
             />
             <img src={track.images[1].url} className="relative object-contain h-20 rounded-2xl" alt={track.title} />
-            <div className="flex flex-col px-5">
-                <span className="font-semibold text-gray-200 text-md">{track.title}</span>
-                <span className="text-xs font-normal text-gray-500">{track.artist}</span>
+            <div className="flex flex-col px-5 truncate">
+                <span className="text-sm font-semibold text-gray-200 truncate md:text-md" title={track.title}>
+                    {track.title}
+                </span>
+                <span className="text-xs font-normal text-gray-500 truncate" title={track.artist}>
+                    {track.artist}
+                </span>
             </div>
         </div>
     </div>

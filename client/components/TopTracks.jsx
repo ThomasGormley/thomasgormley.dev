@@ -7,7 +7,6 @@ const fetchTopTracks = async () => {
     if (!data.ok) {
         throw Error(data.statusText);
     }
-    console.log(`json`, json);
     return json;
 };
 
