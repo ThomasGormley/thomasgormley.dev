@@ -10,14 +10,17 @@ module.exports = {
             transparent: 'transparent',
             current: 'currentColor',
             gray: colors.gray,
-            fuchsia: colors.fuchsia,
+            primary: colors.fuchsia,
             red: colors.red,
             blue: colors.lightBlue,
             yellow: colors.amber,
+            ...colors,
         },
         extend: {
             backgroundImage: (theme) => ({
                 'hero-computer': "url('/laptopherobg.png')",
+                'hero-computer-md': "url('/hero-computer-768.jpg')",
+                'hero-computer-lg': "url('/hero-computer-1280.jpg')",
             }),
             fontFamily: {
                 poppins: ['Poppins', 'Arial', 'sans-serif', 'system-ui'],
