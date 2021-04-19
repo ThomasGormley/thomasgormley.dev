@@ -23,8 +23,9 @@ const socialButtonData = [
 
 const SocialLinks = () => (
     <div className="flex justify-center mt-6 space-x-4">
-        {socialButtonData.map((item) => (
+        {socialButtonData.map((item, i) => (
             <SocialIcon
+                index={i}
                 key={item.title}
                 href={item.href}
                 title={item.title}

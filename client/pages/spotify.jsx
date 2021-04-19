@@ -2,10 +2,11 @@ import Head from 'next/head';
 import Container from '../components/Container';
 import Header from '../components/Header';
 import NowPlaying from '../components/NowPlaying';
+import PageLayout from '../components/PageLayout';
 import TopTracks from '../components/TopTracks';
 
 const Spotify = () => (
-    <div className="min-h-screen bg-gray-900 ">
+    <PageLayout>
         <Head>
             <title>Thomas Gormley</title>
             <link rel="icon" href="/favicon.ico" />
@@ -17,7 +18,7 @@ const Spotify = () => (
                 <TopTracks />
             </div>
         </Container>
-    </div>
+    </PageLayout>
 );
 
 export default Spotify;

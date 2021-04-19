@@ -12,4 +12,18 @@ export default {
         TOKEN_ENDPOINT: `https://accounts.spotify.com/api/token`,
         TOP_TRACKS_ENDPOINT: `https://api.spotify.com/v1/me/top/tracks`,
     },
+    SEO: {
+        description: 'Web &amp; software developer based in Ballycastle.',
+        openGraph: {
+            type: 'website',
+            locale: 'en_UK',
+            url: 'https://www.thomasgormley.dev',
+            site_name: 'Thomas Gormley',
+        },
+        twitter: {
+            handle: '@thomasgormley99',
+            site: '@thomasgormley99',
+            cardType: 'summary_large_image',
+        },
+    },
 };
