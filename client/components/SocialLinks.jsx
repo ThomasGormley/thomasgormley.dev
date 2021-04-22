@@ -1,5 +1,7 @@
-import { GitHub, SocialIcon, Spotify, Twitter } from './Icons';
+import { GitHub, SocialIcon, Spotify, Twitter } from './icons';
+import config from '../lib/config';
 
+const { twitter, github } = config.social;
 const socialButtonData = [
     {
         title: 'Spotify',
@@ -10,13 +12,13 @@ const socialButtonData = [
     {
         title: 'GitHub',
         hoverColour: 'hover:text-[#C0C0C0]',
-        href: 'https://github.com/thomasgormley',
+        href: github,
         icon: <GitHub />,
     },
     {
         title: 'Twitter',
         hoverColour: 'hover:text-[#1DA1F2]',
-        href: 'https://twitter.com/thomasgormley99',
+        href: twitter,
         icon: <Twitter />,
     },
 ];

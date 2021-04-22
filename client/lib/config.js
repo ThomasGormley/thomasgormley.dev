@@ -13,6 +13,7 @@ export default {
         TOP_TRACKS_ENDPOINT: `https://api.spotify.com/v1/me/top/tracks`,
     },
     SEO: {
+        defaultTitle: 'Thomas Gormley — Web & Software Developer',
         description: 'Web &amp; software developer based in Ballycastle.',
         openGraph: {
             type: 'website',
@@ -25,5 +26,9 @@ export default {
             site: '@thomasgormley99',
             cardType: 'summary_large_image',
         },
+    },
+    social: {
+        twitter: 'https://twitter.com/thomasgormley99',
+        github: 'https://github.com/thomasgormley',
     },
 };

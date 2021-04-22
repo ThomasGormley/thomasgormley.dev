@@ -19,8 +19,8 @@ const xIcon = (
 
 const navItems = [
     {
-        text: 'Portfolio',
-        href: '/portfolio',
+        text: 'Projects',
+        href: '#projects',
     },
     {
         text: 'Contact',

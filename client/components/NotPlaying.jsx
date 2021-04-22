@@ -1,4 +1,4 @@
-import { Spotify } from './Icons';
+import { Spotify } from './icons';
 
 const NotPlaying = () => (
     <div className="flex mt-4 space-x-2 text-gray-50">
