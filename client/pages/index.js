@@ -1,8 +1,9 @@
 import Head from 'next/head';
 import Container from '../components/Container';
 import Header from '../components/Header';
-import Main from '../components/Main';
+import Hero from '../components/Hero';
 import PageLayout from '../components/PageLayout';
+import Projects from '../components/Projects';
 
 export default function Home() {
     return (
@@ -14,10 +15,8 @@ export default function Home() {
                 </Head>
                 <Container>
                     <Header />
-                    <Main />
-                    <section id="projects" className="text-gray-50">
-                        <h1>Projects</h1>
-                    </section>
+                    <Hero />
+                    {/* <Projects /> */}
                 </Container>
             </PageLayout>
         </>

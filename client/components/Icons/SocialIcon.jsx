@@ -24,7 +24,7 @@ const SocialIcon = ({ title, href, icon, size, colour, hoverColour, index }) => 
         initial="hidden"
         animate="visible"
         variants={variants}
-        className={`w-${size} h-${size} ${colour} ${hoverColour} duration-150 cursor-pointer transform hover:-translate-y-1`}
+        className={`w-${size} h-${size} ${colour} ${hoverColour} filter duration-150 cursor-pointer transform hover:-translate-y-1`}
     >
         <Link href={href}>
             <a title={title} href={href}>

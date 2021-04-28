@@ -42,7 +42,7 @@ const PlayingTrack = ({ track }) => {
                         <div className="flex h-1 mb-4 overflow-hidden text-xs bg-gray-500 rounded shadow-md">
                             <div
                                 style={{ width: `${percent}%` }}
-                                className="flex flex-col justify-center text-center text-white shadow-md bg-primary-800 whitespace-nowrap"
+                                className="flex flex-col justify-center text-center text-white shadow-md bg-primary-500 whitespace-nowrap"
                             ></div>
                         </div>
                     </div>
