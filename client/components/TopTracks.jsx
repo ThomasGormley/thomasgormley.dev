@@ -1,5 +1,6 @@
 import { useQuery } from 'react-query';
 import Track from './Track';
+import TrackSkeleton from './TrackSkeleton';
 
 const fetchTopTracks = async () => {
     const data = await fetch('/api/top-tracks');
@@ -24,7 +25,7 @@ const TopTracks = () => {
                 </p>
                 <div className="grid grid-cols-2 mt-5">
                     {isLoading ? (
-                        <p>Loading</p>
+                        <TrackSkeleton />
                     ) : (
                         data?.tracks?.map((track) => <Track track={track} key={track.title} />)
                     )}

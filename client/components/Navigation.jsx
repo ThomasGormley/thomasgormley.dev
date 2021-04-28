@@ -18,13 +18,13 @@ const xIcon = (
 );
 
 const navItems = [
-    {
-        text: 'Portfolio',
-        href: '/portfolio',
-    },
+    // {
+    //     text: 'Projects',
+    //     href: '#projects',
+    // },
     {
         text: 'Contact',
-        href: '/contact',
+        href: 'mailto:thomasgormley415@gmail.com',
     },
 ];
 
@@ -32,7 +32,7 @@ const NavigationItems = (
     <div className="flex flex-col px-2 space-y-1 md:space-y-0 md:space-x-2 md:flex-row">
         {navItems.map((item) => (
             <Link href={item.href} key={item.text}>
-                <a className="px-3 py-2 text-sm duration-300 ease-in-out bg-gray-900 rounded-md text-gray-50 md:hover:text-primary-500 md:bg-transparent hover:bg-gray-800">
+                <a className="px-3 py-2 text-sm duration-300 ease-in-out bg-gray-900 rounded-md text-gray-50 md:hover:text-primary-400 md:bg-transparent hover:bg-gray-800 md:hover:bg-transparent md:hover:text-shadow-primary-sm">
                     {item.text}
                 </a>
             </Link>
@@ -45,7 +45,7 @@ const Navigation = () => (
         {({ open }) => (
             <>
                 <div className="flex flex-row items-center justify-between w-full h-16 p-6 text-sm text-gray-50 font-poppins">
-                    <h1 className="font-semibold tracking-widest uppercase duration-300 ease-in-out hover:text-primary-500">
+                    <h1 className="font-semibold tracking-widest uppercase duration-300 ease-in-out hover:text-primary-400 hover:text-shadow-primary-bright">
                         <Link href="/">THOMAS GORMLEY</Link>
                     </h1>
 

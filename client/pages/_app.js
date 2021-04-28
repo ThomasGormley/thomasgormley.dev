@@ -1,10 +1,15 @@
 import 'tailwindcss/tailwind.css';
+import '../styles/global.css';
 import Head from 'next/head';
 import { QueryClientProvider, QueryClient } from 'react-query';
+import { DefaultSeo } from 'next-seo';
+import config from '../lib/config';
+
 const queryClient = new QueryClient();
 function MyApp({ Component, pageProps }) {
     return (
-        <QueryClientProvider client={queryClient}>
+        <>
+            <DefaultSeo {...config.SEO} />
             <Head>
                 <link rel="preconnect" href="https://fonts.gstatic.com" />
                 <link
@@ -12,8 +17,10 @@ function MyApp({ Component, pageProps }) {
                     rel="stylesheet"
                 />
             </Head>
-            <Component {...pageProps} />
-        </QueryClientProvider>
+            <QueryClientProvider client={queryClient}>
+                <Component {...pageProps} />
+            </QueryClientProvider>
+        </>
     );
 }
 

@@ -9,10 +9,13 @@
     },
     "dependencies": {
         "@headlessui/react": "^1.0.0",
+        "framer-motion": "^4.1.4",
         "next": "latest",
+        "next-seo": "^4.24.0",
         "react": "^17.0.1",
         "react-dom": "^17.0.1",
-        "react-query": "^3.13.6"
+        "react-query": "^3.13.6",
+        "tailwindcss-typography": "^3.1.0"
     },
     "devDependencies": {
         "autoprefixer": "^10.0.4",

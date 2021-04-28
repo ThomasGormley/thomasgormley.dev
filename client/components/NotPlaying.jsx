@@ -1,7 +1,7 @@
-import { Spotify } from './Icons';
+import { Spotify } from './icons';
 
 const NotPlaying = () => (
-    <div className="flex space-x-2 text-gray-50">
+    <div className="flex mt-4 space-x-2 text-gray-50">
         <span className="text-[#1ED760] w-7 h-7">
             <Spotify />
         </span>
