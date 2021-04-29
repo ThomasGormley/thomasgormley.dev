@@ -21,6 +21,7 @@ module.exports = {
             primary: '0px 0px 15px rgba(251, 191, 36, 0.6)',
             'primary-bright': '0px 0px 15px rgba(251, 191, 36, 0.8)',
             'primary-sm': '0px 0px 7px rgba(251, 191, 36, 0.8)',
+            green: '0px 0px 15px rgba(34, 197, 94, 0.8)',
             lg: '0 2px 10px rgba(0, 0, 0, 0.5)',
         },
 

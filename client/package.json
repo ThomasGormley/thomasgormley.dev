@@ -9,13 +9,15 @@
     },
     "dependencies": {
         "@headlessui/react": "^1.0.0",
+        "formik": "^2.2.6",
         "framer-motion": "^4.1.4",
         "next": "latest",
         "next-seo": "^4.24.0",
         "react": "^17.0.1",
         "react-dom": "^17.0.1",
         "react-query": "^3.13.6",
-        "tailwindcss-typography": "^3.1.0"
+        "tailwindcss-typography": "^3.1.0",
+        "yup": "^0.32.9"
     },
     "devDependencies": {
         "autoprefixer": "^10.0.4",
