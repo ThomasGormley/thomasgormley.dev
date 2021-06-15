@@ -18,7 +18,7 @@ const variants = {
     }),
 };
 
-const SocialIcon = ({ title, href, icon, size, colour, hoverColour, index }) => (
+const SocialIcon = ({ title, href, icon, size, colour = 'text-gray-50', hoverColour, index }) => (
     <motion.span
         custom={index}
         initial="hidden"
@@ -34,7 +34,4 @@ const SocialIcon = ({ title, href, icon, size, colour, hoverColour, index }) => 
     </motion.span>
 );
 
-SocialIcon.defaultProps = {
-    colour: 'text-gray-50',
-};
 export default SocialIcon;
