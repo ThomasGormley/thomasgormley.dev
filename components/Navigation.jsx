@@ -24,7 +24,7 @@ const navItems = [
     // },
     {
         text: 'Contact',
-        href: 'mailto:thomasgormley415@gmail.com',
+        href: '#contact',
     },
 ];
 

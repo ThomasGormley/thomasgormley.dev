@@ -1,7 +1,9 @@
 module.exports = {
     future: {
-        webpack5: true,
         strictPostcssConfiguration: true,
+    },
+    eslint: {
+        ignoreDuringBuilds: true,
     },
     images: {
         domains: ['i.scdn.co'],
