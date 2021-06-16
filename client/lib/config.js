@@ -7,7 +7,7 @@ const SMTP_PORT = process.env.SMTP_PORT;
 const SMTP_USERNAME = process.env.SMTP_USERNAME;
 const SMTP_PASSWORD = process.env.SMTP_PASSWORD;
 
-export default {
+const config = {
     spotify: {
         client_id,
         client_secret,
@@ -48,3 +48,5 @@ export default {
         github: 'https://github.com/thomasgormley',
     },
 };
+
+export default config;

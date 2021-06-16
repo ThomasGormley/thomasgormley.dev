@@ -1,9 +1,10 @@
 {
     "name": "thomasgormley.dev",
-    "version": "0.1.0",
+    "version": "1.0.0",
     "private": true,
     "scripts": {
         "dev": "next dev",
+        "lint": "next lint",
         "build": "next build",
         "start": "next start"
     },
@@ -22,6 +23,7 @@
     "devDependencies": {
         "autoprefixer": "^10.0.4",
         "eslint": "^7.23.0",
+        "eslint-config-next": "^11.0.0",
         "eslint-config-prettier": "^8.1.0",
         "eslint-plugin-import": "^2.22.1",
         "eslint-plugin-jsx-a11y": "^6.4.1",

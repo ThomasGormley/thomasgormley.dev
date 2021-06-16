@@ -10,7 +10,8 @@
         "plugin:import/errors",
         "plugin:import/warnings",
         "prettier",
-        "plugin:jsx-a11y/recommended"
+        "plugin:jsx-a11y/recommended",
+        "plugin:@next/next/recommended"
     ],
     "parserOptions": {
         "ecmaFeatures": {
