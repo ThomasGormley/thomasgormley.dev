@@ -1,28 +1,5 @@
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
-// const validationSchema = Yup.object({
-//     email: Yup.string('Enter your email').email('Enter a valid email').required('Email is required'),
-//     name: Yup.string('Enter your name').required('name is required'),
-//     message: Yup.string('Enter your message')
-//         .min(8, 'Password should be of minimum 8 characters length')
-//         .required('Password is required'),
-// });
-// const initialValues = {
-//     email: '',
-//     name: '',
-//     message: '',
-// };
-
-// const TextField = ({ field, form, ...props }) => (
-//     <>
-//         <input
-//             type="text"
-//             {...field}
-//             {...props}
-//             className="inline-block w-full px-1 py-2 text-sm transition duration-200 bg-gray-900 border border-gray-800 rounded shadow-inner outline-none hover:border-gray-700 focus:border-primary-400 focus:drop-shadow-twitter focus:ring focus:ring-primary-400 focus:ring-opacity-10 "
-//         />
-//     </>
-// );
 
 const validationSchema = Yup.object({
     email: Yup.string().email('Please enter a valid email').required('Please enter your email'),
@@ -142,7 +119,7 @@ const Contact = () => (
                     </div>
 
                     <div className="float-right">
-                        {!errors?.submit ? (
+                        {errors?.submit ? (
                             <>
                                 <span className="block text-right">Something wen&apos;t wrong.</span>
                                 <span>
@@ -155,7 +132,7 @@ const Contact = () => (
                                     </a>
                                 </span>
                             </>
-                        ) : !status?.success ? (
+                        ) : status?.success ? (
                             <span className="text-sm text-gray-300">
                                 {`Thanks for your message! I will reply via email as soon as possible.`}
                             </span>
