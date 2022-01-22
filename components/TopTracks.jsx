@@ -23,7 +23,7 @@ const TopTracks = () => {
                 <p className="mb-4 text-xs font-normal text-gray-500">
                     The tracks I&apos;ve been listening to recently on Spotify
                 </p>
-                <div className="grid grid-cols-2 mt-5">
+                <div className="grid grid-cols-1 md:grid-cols-2 mt-5">
                     {isLoading ? (
                         <TrackSkeleton />
                     ) : (
