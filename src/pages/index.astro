@@ -1,0 +1,56 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Link from "../components/Link.astro";
+---
+
+<Layout title="thomasgormley.dev">
+  <header class="border-b-2 pb-1 mb-4 border-b-orange-600">
+    <a href="/">
+      <h1 class="text-2xl font-bold">thomasgormley.dev</h1>
+    </a>
+  </header>
+
+  <main class="lowercase">
+    <section>
+      <p class="lowercase font-medium">software engineer based in London.</p>
+      <p class="lowercase font-medium">
+        delivering intelligent communications at
+        <Link href="https://firstup.io">Firstup</Link>.
+      </p>
+    </section>
+
+    <section class="mt-8">
+      <h2 class="text-lg font-bold">projects</h2>
+      <ul class="list-disc list-inside">
+        <li>
+          <Link href="https://github.com/thomasgormley/go-ratelimit"
+            >go-ratelimit</Link
+          > — ratelimiters in go
+        </li>
+        <li>
+          <Link href="https://github.com/thomasgormley/dev-cli">dev-cli</Link> —
+          Development toolbox with common utilities and script
+        </li>
+        <li>
+          <Link href="https://github.com/thomasgormley/thomasgormley.dev"
+            >thomasgormley.dev</Link
+          > — this website
+        </li>
+        <li>
+          <Link href="https://github.com/thomasgormley/win10-web"
+            >win10-web</Link
+          > — Windows 10 in the browser with react
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="mt-16 flex lowercase flex-col gap-">
+    <Link href="mailto:thomas@thomasgormley.dev">
+      thomas@thomasgormley.dev
+    </Link>
+    <Link href="https://github.com/thomasgormley" target="_blank">
+      github.com/thomasgormley
+    </Link>
+  </footer>
+</Layout>
