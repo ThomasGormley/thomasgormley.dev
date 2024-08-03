@@ -6,4 +6,8 @@ type Props = HTMLAttributes<"a">;
 const props = Astro.props;
 ---
 
-<a {...props} class="underline underline-offset-2 decoration-orange-700 font-medium"><slot /> </a>
+<a
+  {...props}
+  class="underline underline-offset-2 decoration-orange-700 font-medium"
+  ><slot /></a
+>
