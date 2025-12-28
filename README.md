@@ -1,3 +1,3 @@
 # thomasgormley.dev
 
-simple personal site
+personal site
